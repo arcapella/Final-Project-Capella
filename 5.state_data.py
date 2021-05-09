@@ -31,5 +31,5 @@ states_map = states.merge(statedata, on = "STUSPS", how = 'outer', indicator = T
 print(states_map["_merge"].value_counts())
 states_map = states_map.drop(["_merge"], axis=1)
 
-
+states_map = states_map.to_crs(epsg=26918)
 states_map.to_file("state_data.gpkg", driver = "GPKG")

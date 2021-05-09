@@ -28,4 +28,7 @@ print(policies)
 grouped = analyze.groupby(["HS_required","standards"])
 
 print( analyze.groupby(["no_subs", "test"]).size())
+print( analyze.groupby(["funding", "test"]).size())
+print( analyze.groupby(["HS_required", "HS_minutes"]).size())
+print( analyze.groupby(["WH_punish", "PE_punish"]).size())
 
